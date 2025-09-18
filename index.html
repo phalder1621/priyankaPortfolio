@@ -271,6 +271,67 @@
         </div>
     </section>
 
+    <!-- Expertise Mind Map Section -->
+    <section class="mind-map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Private AI-Driven Secure Business Cases</h2>
+                <p class="section-subtitle">Comprehensive expertise in secure AI and privacy-preserving technologies</p>
+            </div>
+            <div class="mind-map-container">
+                <div class="mind-map-zoom-controls">
+                    <button class="zoom-btn zoom-in" onclick="zoomIn()">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <button class="zoom-btn zoom-out" onclick="zoomOut()">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button class="zoom-btn zoom-reset" onclick="openFullscreen()">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </button>
+                </div>
+                <div class="mind-map-wrapper" id="mindMapWrapper">
+                    <img src="NotebookLM Mind Map.png" alt="Private AI-Driven Secure Business Cases Mind Map" class="mind-map-image" id="mindMapImage">
+                </div>
+                <div class="mind-map-info">
+                    <p>Use the zoom controls above to explore the comprehensive landscape of Private AI-Driven Secure Business Cases, covering key concepts, business value drivers, regulatory landscape, ethical implications, technical foundations, and new business models.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fullscreen Mind Map Modal -->
+    <div id="fullscreenModal" class="fullscreen-modal">
+        <div class="fullscreen-content">
+            <div class="fullscreen-header">
+                <h3>Private AI-Driven Secure Business Cases</h3>
+                <button class="close-fullscreen" onclick="closeFullscreen()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="fullscreen-mind-map" id="fullscreenMindMap">
+                <img src="NotebookLM Mind Map.png" alt="Private AI-Driven Secure Business Cases Mind Map" class="fullscreen-image" id="fullscreenImage">
+                <div class="scroll-indicator">
+                    <div class="scroll-hint">
+                        <i class="fas fa-arrows-alt"></i>
+                        <span>Scroll to explore • Ctrl+Scroll to zoom • Drag to pan</span>
+                    </div>
+                </div>
+            </div>
+            <div class="fullscreen-controls">
+                <button class="zoom-btn zoom-in" onclick="fullscreenZoomIn()">
+                    <i class="fas fa-plus"></i>
+                </button>
+                <button class="zoom-btn zoom-out" onclick="fullscreenZoomOut()">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <button class="zoom-btn zoom-reset" onclick="fullscreenResetZoom()">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Education Section -->
     <section class="education">
         <div class="container">

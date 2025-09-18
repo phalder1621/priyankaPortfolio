@@ -699,6 +699,318 @@ section {
     line-height: 1.6;
 }
 
+/* Mind Map Section */
+.mind-map-section {
+    background: #f9fafb;
+    padding: 80px 0;
+}
+
+.mind-map-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.mind-map-zoom-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.zoom-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.zoom-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.zoom-btn:active {
+    transform: translateY(0);
+}
+
+.zoom-reset {
+    background: #6b7280;
+}
+
+.zoom-reset:hover {
+    background: #4b5563;
+}
+
+.mind-map-wrapper {
+    position: relative;
+    overflow: auto;
+    background: #1f2937;
+    height: 450px;
+    display: block;
+    cursor: grab;
+    border-radius: 0 0 15px 15px;
+    padding: 20px;
+}
+
+.mind-map-wrapper::before {
+    content: "Scroll to explore • Ctrl+Scroll to zoom • Drag to pan";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    z-index: 10;
+    pointer-events: none;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: fadeInOut 4s ease-in-out;
+}
+
+/* Custom scrollbar styling */
+.mind-map-wrapper::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.mind-map-wrapper::-webkit-scrollbar-track {
+    background: #374151;
+    border-radius: 4px;
+}
+
+.mind-map-wrapper::-webkit-scrollbar-thumb {
+    background: #6b7280;
+    border-radius: 4px;
+}
+
+.mind-map-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}
+
+/* Firefox scrollbar styling */
+.mind-map-wrapper {
+    scrollbar-width: thin;
+    scrollbar-color: #6b7280 #374151;
+}
+
+/* Fullscreen Modal */
+.fullscreen-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 0.3s ease;
+}
+
+.fullscreen-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.fullscreen-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(31, 41, 55, 0.9);
+    color: white;
+    border-bottom: 1px solid #374151;
+}
+
+.fullscreen-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.close-fullscreen {
+    background: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.close-fullscreen:hover {
+    background: #dc2626;
+    transform: scale(1.1);
+}
+
+.fullscreen-mind-map {
+    flex: 1;
+    position: relative;
+    overflow: auto;
+    background: #1f2937;
+    display: block;
+    cursor: grab;
+    padding: 20px;
+}
+
+.fullscreen-mind-map:active {
+    cursor: grabbing;
+}
+
+.fullscreen-image {
+    max-width: none;
+    height: auto;
+    width: auto;
+    min-width: 100%;
+    min-height: 100%;
+    transition: transform 0.3s ease;
+    user-select: none;
+    object-fit: contain;
+    display: block;
+    margin: 0;
+    position: relative;
+}
+
+.scroll-indicator {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.scroll-hint {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: fadeInOut 3s ease-in-out;
+}
+
+.scroll-hint i {
+    font-size: 1rem;
+    color: #60a5fa;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; transform: translateY(-10px); }
+    20%, 80% { opacity: 1; transform: translateY(0); }
+}
+
+.fullscreen-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(31, 41, 55, 0.9);
+    border-top: 1px solid #374151;
+}
+
+/* Fullscreen scrollbar styling */
+.fullscreen-mind-map::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+.fullscreen-mind-map::-webkit-scrollbar-track {
+    background: #374151;
+    border-radius: 6px;
+}
+
+.fullscreen-mind-map::-webkit-scrollbar-thumb {
+    background: #6b7280;
+    border-radius: 6px;
+}
+
+.fullscreen-mind-map::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}
+
+.fullscreen-mind-map {
+    scrollbar-width: thin;
+    scrollbar-color: #6b7280 #374151;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+/* Ensure horizontal scrolling works */
+.fullscreen-mind-map {
+    white-space: nowrap;
+}
+
+.fullscreen-image {
+    white-space: normal;
+    display: inline-block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.mind-map-wrapper:active {
+    cursor: grabbing;
+}
+
+.mind-map-image {
+    max-width: none;
+    height: auto;
+    width: auto;
+    min-width: 100%;
+    min-height: 100%;
+    transition: transform 0.3s ease;
+    user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    object-fit: contain;
+    display: block;
+    margin: 0;
+    position: relative;
+}
+
+.mind-map-info {
+    padding: 1.5rem;
+    background: #f8fafc;
+    text-align: center;
+    color: #4b5563;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
 /* Education Section */
 .education {
     background: white;
@@ -1198,6 +1510,25 @@ section {
         right: 1rem;
         font-size: 0.7rem;
         padding: 0.2rem 0.6rem;
+    }
+    
+    .mind-map-zoom-controls {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .zoom-btn {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+    }
+    
+    .mind-map-wrapper {
+        height: 375px;
+    }
+    
+    .mind-map-info {
+        padding: 1rem;
+        font-size: 0.9rem;
     }
     
     .footer-content {
