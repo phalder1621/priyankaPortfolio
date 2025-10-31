@@ -612,6 +612,67 @@ section {
     background: white;
 }
 
+/* Company Logos Section */
+.company-logos {
+    background: #f9fafb;
+    padding: 60px 0;
+}
+
+.logos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 2.5rem;
+    padding: 2rem 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.logos-container::-webkit-scrollbar {
+    display: none;
+}
+
+.logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.logo-item:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+.company-logo {
+    max-width: 120px;
+    max-height: 60px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+
+.logo-item:hover .company-logo {
+    filter: grayscale(0%);
+}
+
+.logo-text {
+    display: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #4b5563;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Fallback text will be shown via JavaScript onerror handler */
+
 .timeline {
     position: relative;
     max-width: 800px;
@@ -1541,9 +1602,37 @@ section {
         flex-wrap: wrap;
         justify-content: center;
     }
+    
+    .logos-container {
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+    }
+    
+    .company-logo {
+        max-width: 100px;
+        max-height: 50px;
+    }
+    
+    .logo-text {
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 480px) {
+    .logos-container {
+        gap: 1.5rem;
+    }
+    
+    .company-logo {
+        max-width: 80px;
+        max-height: 40px;
+    }
+    
+    .logo-text {
+        font-size: 0.8rem;
+    }
+    
     .hero-name-first,
     .hero-name-last {
         font-size: 2rem;
