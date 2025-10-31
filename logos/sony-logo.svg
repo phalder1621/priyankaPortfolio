@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
+  <rect width="200" height="60" fill="white"/>
+  <text x="100" y="38" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#000000" text-anchor="middle" letter-spacing="3">SONY</text>
+  <text x="165" y="15" font-family="Arial, sans-serif" font-size="8" fill="#000000">®</text>
+</svg>
