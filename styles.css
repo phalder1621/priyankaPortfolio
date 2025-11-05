@@ -619,6 +619,11 @@ section {
     margin-top: 70px;
     border-bottom: 1px solid #e5e7eb;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    overflow: visible !important;
+}
+
+.company-logos .container {
+    overflow: visible !important;
 }
 
 .logos-container {
@@ -673,6 +678,9 @@ section {
 .logo-item:not(.logo-large):not(.logo-extra-large) .company-logo {
     max-width: 300px !important;
     max-height: 150px !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
 }
 
 .logo-item:hover .company-logo {
@@ -686,16 +694,20 @@ section {
 }
 
 .logo-extra-large {
-    min-width: 300px !important;
-    min-height: 150px !important;
+    min-width: 350px !important;
+    min-height: 180px !important;
+    width: auto !important;
+    height: auto !important;
+    overflow: visible !important;
 }
 
 .logo-extra-large .company-logo {
-    max-width: 400px !important;
-    max-height: 200px !important;
-    width: auto !important;
+    max-width: 350px !important;
+    max-height: 180px !important;
+    width: 100% !important;
     height: auto !important;
     object-fit: contain !important;
+    object-position: center !important;
 }
 
 .logo-text {
