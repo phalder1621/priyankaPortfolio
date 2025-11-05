@@ -685,8 +685,10 @@ section {
 }
 
 .logo-extra-large .company-logo {
-    max-width: 560px;
-    max-height: 280px;
+    max-width: 560px !important;
+    max-height: 280px !important;
+    width: auto;
+    height: auto;
 }
 
 .logo-text {
