@@ -622,12 +622,12 @@ section {
 }
 
 .logos-container {
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
-    gap: 3.5rem;
-    padding: 2rem 0;
+    gap: 4rem !important;
+    padding: 3rem 0 !important;
     overflow-x: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -638,15 +638,15 @@ section {
 }
 
 .logo-item {
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
-    opacity: 1;
+    opacity: 1 !important;
     transition: all 0.3s ease;
     position: relative;
-    min-width: 120px;
-    height: 80px;
-    padding: 10px;
+    min-width: 150px;
+    height: 100px;
+    padding: 15px;
 }
 
 .logo-item:hover {
@@ -655,21 +655,21 @@ section {
 }
 
 .company-logo {
-    max-width: 240px;
-    max-height: 120px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    filter: none;
+    max-width: 300px !important;
+    max-height: 150px !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+    filter: none !important;
     transition: all 0.3s ease;
-    visibility: visible;
+    visibility: visible !important;
 }
 
 /* Ensure regular logos stay at standard size */
 .logo-item:not(.logo-large):not(.logo-extra-large) .company-logo {
-    max-width: 240px !important;
-    max-height: 120px !important;
+    max-width: 300px !important;
+    max-height: 150px !important;
 }
 
 .logo-item:hover .company-logo {
@@ -678,15 +678,15 @@ section {
 }
 
 .logo-large .company-logo {
-    max-width: 360px;
-    max-height: 180px;
+    max-width: 450px !important;
+    max-height: 225px !important;
 }
 
 .logo-extra-large .company-logo {
-    max-width: 720px !important;
-    max-height: 360px !important;
-    width: auto;
-    height: auto;
+    max-width: 900px !important;
+    max-height: 450px !important;
+    width: auto !important;
+    height: auto !important;
 }
 
 .logo-text {
