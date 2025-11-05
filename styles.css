@@ -673,6 +673,11 @@ section {
     max-height: 140px;
 }
 
+.logo-extra-large .company-logo {
+    max-width: 560px;
+    max-height: 280px;
+}
+
 .logo-text {
     display: none;
     font-size: 1rem;
@@ -1630,6 +1635,11 @@ section {
         max-height: 110px;
     }
     
+    .logo-extra-large .company-logo {
+        max-width: 440px;
+        max-height: 220px;
+    }
+    
     .logo-text {
         font-size: 0.9rem;
     }
@@ -1648,6 +1658,11 @@ section {
     .logo-large .company-logo {
         max-width: 180px;
         max-height: 90px;
+    }
+    
+    .logo-extra-large .company-logo {
+        max-width: 360px;
+        max-height: 180px;
     }
     
     .logo-text {
