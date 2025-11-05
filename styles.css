@@ -647,6 +647,11 @@ section {
     height: 50px;
 }
 
+.logo-item:not(.logo-large):not(.logo-extra-large) .company-logo {
+    max-width: 180px;
+    max-height: 90px;
+}
+
 .logo-item:hover {
     opacity: 1;
     transform: translateY(-3px);
@@ -662,6 +667,12 @@ section {
     filter: grayscale(100%);
     transition: all 0.3s ease;
     visibility: visible;
+}
+
+/* Ensure regular logos stay at standard size */
+.logo-item:not(.logo-large):not(.logo-extra-large) .company-logo {
+    max-width: 180px !important;
+    max-height: 90px !important;
 }
 
 .logo-item:hover .company-logo {
